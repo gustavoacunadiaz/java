@@ -1,22 +1,20 @@
 package model;
 
 public class Empleado {	
-	private Integer id;
 	private String nombre;
 	private String apellido;
 	private String rut;
 	private String cargo;
-	private Integer salario;
-	private Integer bonos;
-	private Integer descuentos;
+	private String salario;
+	private String bonos;
+	private String descuentos;
 	
 	public Empleado() {
 		super();
 	}
 	
-	public Empleado(Integer id, String nombre, String apellido, String rut, String cargo, Integer salario, Integer bonos, Integer descuentos) {
+	public Empleado(String nombre, String apellido, String rut, String cargo, String salario, String bonos, String descuentos) {
 		super();
-		this.id = id;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.rut = rut;
@@ -26,12 +24,6 @@ public class Empleado {
 		this.descuentos = descuentos;
 	}
 	
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
-		this.id = id;
-	}
 	public String getNombre() {
 		return nombre;
 	}
@@ -56,22 +48,22 @@ public class Empleado {
 	public void setCargo(String cargo) {
 		this.cargo = cargo;
 	}
-	public Integer getSalario() {
+	public String getSalario() {
 		return salario;
 	}
-	public void setSalario(Integer salario) {
+	public void setSalario(String salario) {
 		this.salario = salario;
 	}
-	public Integer getBonos() {
+	public String getBonos() {
 		return bonos;
 	}
-	public void setBonos(Integer bonos) {
+	public void setBonos(String bonos) {
 		this.bonos = bonos;
 	}
-	public Integer getDescuentos() {
+	public String getDescuentos() {
 		return descuentos;
 	}
-	public void setDescuentos(Integer descuentos) {
+	public void setDescuentos(String descuentos) {
 		this.descuentos = descuentos;
 	}
 	

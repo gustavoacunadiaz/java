@@ -1,5 +1,0 @@
-servlets\NominaServlet.class
-servlets\EmpleadoServlet.class
-controller\EmpleadoController.class
-service\EmpleadoService.class
-model\Empleado.class

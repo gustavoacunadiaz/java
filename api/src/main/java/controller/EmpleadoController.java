@@ -14,9 +14,9 @@ public class EmpleadoController {
 	
 	public int add(Empleado emp) {
 		if (empleadoService.isExists(emp.getRut()) != 1) {
-			if (emp.getSalario() > 400000) {
-				if (emp.getBonos() <= emp.getSalario()/2) {
-					if (emp.getDescuentos() <= emp.getSalario()) {
+			if (Integer.parseInt(emp.getSalario()) > 400000) {
+				if (Integer.parseInt(emp.getBonos()) <= Integer.parseInt(emp.getSalario())/2) {
+					if (Integer.parseInt(emp.getDescuentos()) <= Integer.parseInt(emp.getSalario())) {
 						
 						return empleadoService.add(emp);
 						

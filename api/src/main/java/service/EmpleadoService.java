@@ -39,9 +39,9 @@ public class EmpleadoService {
 				emp.setApellido(rs.getString("apellido"));
 				emp.setRut(rs.getString("rut"));
 				emp.setCargo(rs.getString("cargo"));
-				emp.setSalario(rs.getInt("salario"));
-				emp.setBonos(rs.getInt("bonos"));
-				emp.setDescuentos(rs.getInt("descuentos"));				
+				emp.setSalario(rs.getString("salario"));
+				emp.setBonos(rs.getString("bonos"));
+				emp.setDescuentos(rs.getString("descuentos"));				
 				row.put("nombre", emp.getNombre());
 				row.put("apellido", emp.getApellido());
 				row.put("rut", emp.getRut());

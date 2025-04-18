@@ -5,12 +5,11 @@
 		<script>
 			$(document).ready(function(){
 				$('#btnGet').click(function () {
-					console.log("aaqui GET()")
 				    $.ajax({
 				    	method: 'GET',
 				    	url: 'empleados',
 				    	success: function(data) {
-				    		console.log(error);
+				    		console.log(data);
 				    	},
 				    	error: function(xhr, status, error) {
 				    	    console.log(error);
@@ -18,8 +17,6 @@
 				    });
 			    });
 			});	
-			</script>
-			<script>
 			$(document).ready(function(){
 				$('#btnPost').click(function () {
 					var nombreVar = $('#nombre').val();
@@ -52,12 +49,9 @@
 				    });
 			    });
 			});		
-			</script>
-			<script>
 			$(document).ready(function(){
 				$('#btnDelete').click(function () {
 					var ideVar = $('#ide').val();
-					console.log(ideVar);
 				    $.ajax({
 				        url: 'empleados',
 				        type: 'DELETE',
@@ -102,11 +96,21 @@
 		
 		<script>
 			$(document).ready(function(){
-				$('#btnGet').click(function () {
-					console.log("aaqui GET()")
+				$('#btnCargar').click(function () {
+					console.log("aaqui cargar")
+					
+					var fd = new FormData();
+				    fd.append('fileInput', this.files[0]);
+
+					var inVar = $('#fileInput').val();
+					console.log(inVar)
 				    $.ajax({
-				    	method: 'GET',
-				    	url: 'empleados',
+				    	method: 'POST',
+				    	url: '/nominas/calcular',
+				    	dataType: 'json',
+				        processData: false,
+				        contentType: false,
+				    	data: fd,
 				    	success: function(data) {
 				    		console.log(error);
 				    	},
@@ -120,11 +124,8 @@
 		<h2>Cargar nómina:</h2>	
 		<form id="formNomina">
 			<input type="file" id="fileInput">
-			<input required type="text" id="ide" placeholder="ID">
-			<input type="submit" id="btnCargar" value="CargarDELETE">
+			<input type="submit" id="btnCargar" value="CARGAR">
 		</form>
-		
-		
 		
 	</body>
 </html>

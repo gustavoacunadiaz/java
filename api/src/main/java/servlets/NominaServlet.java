@@ -6,13 +6,15 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import controller.NominaController;
 
 @WebServlet("/nominas/calcular")
 public class NominaServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;	
+	private NominaController nominaController = new NominaController();	
        
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("En el doPost()");
+		nominaController.calcular(request);
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
 	}

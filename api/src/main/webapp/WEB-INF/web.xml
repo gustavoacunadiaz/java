@@ -20,15 +20,7 @@
 
     <servlet-mapping>
         <servlet-name>EmpleadoServlet</servlet-name>
-        <url-pattern>/empleados</url-pattern>
-    </servlet-mapping>
-    <!-- <servlet>
-        <servlet-name>NominaServlet</servlet-name>
-        <servlet-class>servlets.NominaServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>NominaServlet</servlet-name>
         <url-pattern>/</url-pattern>
-    </servlet-mapping> -->
+    </servlet-mapping>
+    
 </web-app>
